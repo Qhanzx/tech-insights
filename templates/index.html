@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<title>
+Tech Insight Troves
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</title>
+<style>
+h1{
+    font-size: 40px;
+    font-family:roboto;
+    font-weight: normal;
+}
+
+#banner{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+
+}
+
+#container{
+    max-width: 720px;
+    margin-left:250px;
+    margin: 0 auto;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<h1 class="text-center mt-4">Welcome to {{tech}} Tech Troves</h1>
+<img class="img-fluid" id="banner" src="{{ url_for('static', filename='images/desk.png') }}" />
+
+<h2>
+Tech Troves
+</h2>
+<p>
+Free CSS: This site offers a vast selection of free blog templates. There are 776 different templates available, which you can browse through to find the perfect one for your blog​1​.
+
+Canva: Canva provides customizable, downloadable, and highly responsive blog website templates. These templates cater to both free and paid users, and they're designed to be user-friendly, even for beginners​2​.
+
+Gooyaabi Templates: If you're using Blogger CMS, Gooyaabi Templates has a variety of free templates specifically designed to help your website rank well in search engines for your target keywords. These templates are stylish and easily customizable​3​.
+
+Astra: Astra offers more than 15 free blog website templates that are compatible with leading page builders and Gutenberg, making them easily customizable. You can select a block, drag it onto your page, and tailor it to fit your needs​4​.
+</p>
+<h2>
+Examples
+</h2>
+<p>--TODO--</p>
+<div>
+    {% for post in posts %}
+        {%  include "post.html" %}
+    {% endfor%}
+
+</div>
+<div style="text-align:center">
+
+</div>
+</div>
+</body>
+</html>  
