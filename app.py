@@ -1,6 +1,4 @@
 from flask import Flask, render_template, jsonify
-from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
 
 app = Flask(__name__)
 
@@ -21,6 +19,7 @@ TROVES = [{
     'author': 'Vahid'
 }]
 
+
 @app.route('/')
 def index():
   return render_template('index.html', posts=TROVES, tech='Qhanzx')
@@ -29,6 +28,7 @@ def index():
 @app.route('/api/posts')
 def troves():
   return jsonify(TROVES)
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
