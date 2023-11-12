@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post Submitted</title>
+    {% include 'bootstrap.html'%}
+  </head>
+  <body>
+    {% include 'banner.html'%}
+    Thanks {{posts['author']}}, the following post has been added.
+    <h4>Title</h4>
+    <div>{{posts['title']}}</div>
+
+    <h4>Content</h4>
+    <div>{{posts['content']}}</div>
+
+    {{db}}
+  </body>
+  {% include 'footer.html' %}
+</html>

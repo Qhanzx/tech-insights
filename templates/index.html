@@ -2,40 +2,16 @@
 <head>
 <title>
 Tech Insight Troves
-<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+{% include 'bootstrap.html' %}
 </title>
-<style>
-h1{
-    font-size: 40px;
-    font-family:roboto;
-    font-weight: normal;
-}
+{% include 'banner.html' %}
 
-#banner{
-    width:100%;
-    height:360px;
-    object-fit:cover;
-
-}
-
-#container{
-    max-width: 720px;
-    margin-left:250px;
-    margin: 0 auto;
-}
-</style>
-</head>
-<body>
-<div id="container">
-<h1 class="text-center mt-4">Welcome to {{tech}} Tech Troves</h1>
-<img class="img-fluid" id="banner" src="{{ url_for('static', filename='images/desk.png') }}" />
 
 <h2>
 Tech Troves
 </h2>
+  <div class='row' style="margin-bottom=20px">
+    <div class='col-9'>
 <p>
 Free CSS: This site offers a vast selection of free blog templates. There are 776 different templates available, which you can browse through to find the perfect one for your blog​1​.
 
@@ -45,6 +21,11 @@ Gooyaabi Templates: If you're using Blogger CMS, Gooyaabi Templates has a variet
 
 Astra: Astra offers more than 15 free blog website templates that are compatible with leading page builders and Gutenberg, making them easily customizable. You can select a block, drag it onto your page, and tailor it to fit your needs​4​.
 </p>
+    </div>
+    <div class='d-none d-md-block col-3'>
+     <img src="{{ url_for('static', filename='images/serv.png') }}" style="height=:640px; width:320px;border-radius:6px;"/>
+    </div>
+  </div>
 <h2>
 Examples
 </h2>
@@ -59,5 +40,6 @@ Examples
 
 </div>
 </div>
+  {% include 'footer.html'  %}
 </body>
 </html>  

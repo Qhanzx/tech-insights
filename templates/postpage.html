@@ -1,0 +1,17 @@
+<!DOCTYPE <html>
+<html>
+  <head>
+    <title>{{post.title}} - Posts </title>
+    {% include 'bootstrap.html' %}
+  </head>
+
+  <body>
+    {% include 'nav.html' %}
+    {% include 'banner.html'%}
+    <h2>Title: {{post['title']}}</h2>
+    <h3>Author: {{post['author']}}</h3></h3>
+    <p>{{post['content']}}</p>
+    
+    {% include 'footer.html' %}
+  </body>
+</html>
